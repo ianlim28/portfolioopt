@@ -168,7 +168,7 @@ def max_sharpe_ratio(mean_returns, cov_matrix, risk_free_rate):
                         method='SLSQP', bounds=bounds, constraints=constraints)
     return result
 
-def display_ef_with_selected(table, mean_returns, cov_matrix, risk_free_rate):
+def display_ef_with_selected(table,returns, mean_returns, cov_matrix, risk_free_rate):
     max_sharpe = max_sharpe_ratio(mean_returns, cov_matrix, risk_free_rate)
     sdp, rp = portfolio_annualised_performance(max_sharpe['x'], mean_returns, cov_matrix)
     max_sharpe_allocation = pd.DataFrame(max_sharpe.x,index=table.columns,columns=['allocation'])
