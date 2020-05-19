@@ -22,7 +22,7 @@ def portfolio_annualised_performance(weights, mean_returns, cov_matrix):
     std = np.sqrt(np.dot(weights.T, np.dot(cov_matrix, weights))) * np.sqrt(252)
     return std, returns
   
-def random_portfolios(num_portfolios, mean_returns, cov_matrix, risk_free_rate):
+def random_portfolios(num_portfolios, mean_returns, cov_matrix, risk_free_rate, ticker_lst):
     """
     Generate random weights for all the stocks in the portfolio in order to calculate returns and volatility. It also returns excess return
     mean return: mean return of the dataset
