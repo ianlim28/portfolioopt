@@ -54,7 +54,7 @@ def display_simulated_ef_with_random(mean_returns, cov_matrix, num_portfolios, r
     """
 
     # generating random weights to get obtain results
-    results, weights = random_portfolios(num_portfolios,mean_returns, cov_matrix, risk_free_rate)
+    results, weights = random_portfolios(num_portfolios,mean_returns, cov_matrix, risk_free_rate, ticker_lst)
     # getting the sharpe ratio
     max_sharpe_idx = np.argmax(results[2])
     sdp, rp = results[0,max_sharpe_idx], results[1,max_sharpe_idx]
