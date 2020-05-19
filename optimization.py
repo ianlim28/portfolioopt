@@ -45,7 +45,7 @@ def random_portfolios(num_portfolios, mean_returns, cov_matrix, risk_free_rate, 
         results[2,i] = (portfolio_return - risk_free_rate) / portfolio_std_dev
     return results, weights_record
 
-def display_simulated_ef_with_random(mean_returns, cov_matrix, num_portfolios, risk_free_rate, ticker_lst):
+def display_simulated_ef_with_random(table, mean_returns, cov_matrix, num_portfolios, risk_free_rate, ticker_lst):
 
     """
      First, it generates random portfolio and gets the results (portfolio returns, portfolio volatility, portfolio Sharpe ratio) and weights for the corresponding result. 
